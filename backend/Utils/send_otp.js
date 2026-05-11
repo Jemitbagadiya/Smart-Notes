@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
-const mail = 'smartnotes.web@gmail.com';
-const password = '';  
+const mail = 'encryptvaultj@gmail.com';
+const password = 'iswe fjxd bupx xifz';  
 
 function generateOTP(length) {
     const chars = '0123456789';

@@ -54,7 +54,7 @@ header ul li.dropdown {
     /* background-color: #f9f9f9; */
     background-color: #eff2f5;
     min-width: 140px;
-    z-index: 1;
+    z-index: 9999;
 }
 
 .dropdown-content a {

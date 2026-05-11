@@ -381,7 +381,7 @@ app.get('/blog/:blogId', async (req, res) => {
     console.log("blogId = " + blogId);
 
     const mainFilePath = path.join(__dirname, '..', '..', 'frontend', 'views', 'layout', 'master_template.html');
-    const blogFilePath = path.join(__dirname, '..', '..', 'frontend', 'Blogg', `${blogId}.html`);
+    const blogFilePath = path.join(__dirname, '..', '..', 'frontend', 'blogg', `${blogId}.html`);
 
     console.log("mainFilePath = " + mainFilePath);
     console.log("blogFilePath = " + blogFilePath);
@@ -399,7 +399,8 @@ app.get('/blog/:blogId', async (req, res) => {
         // Extract date and user from the blog object
         const dateOptions = { month: 'long', day: 'numeric', year: 'numeric' };
         const formattedDate = new Intl.DateTimeFormat('en-US', dateOptions).format(blog.createdAt);
-        const dateAndUser = `${formattedDate} posted by ${blog.author.username}`;
+        const authorName = blog.author ? blog.author.username : "Unknown User";
+        const dateAndUser = `${formattedDate} posted by ${authorName}`;
 
         // Read content of blog file
         fs.readFile(blogFilePath, 'utf8', (err, blogContent) => {

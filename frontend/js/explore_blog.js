@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const article = document.createElement('article');
             article.innerHTML = `
                 <h2 style="color: #174C7E;">${blog.title}</h2>
-                <p>${formattedDate} posted by ${blog.author.username}</p>
+                <p>${formattedDate} posted by ${blog.author ? blog.author.username : 'Unknown User'}</p>
                 <a href="${blogLink}">Read more</a>
             `;
             mainElement.appendChild(article);

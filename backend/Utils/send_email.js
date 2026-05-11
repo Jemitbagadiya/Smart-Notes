@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
-const mail = 'smartnotes.web@gmail.com';
-const password = 'lgxs sayl nymx teoo';
+const mail = 'encryptvaultj@gmail.com';
+const password = 'iswe fjxd bupx xifz';
 
 async function sendEmail(email, subject, text) {
     try {
